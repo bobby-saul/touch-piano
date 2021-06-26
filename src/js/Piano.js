@@ -1,9 +1,12 @@
 import React from "react";
+import PianoTop from './PianoTop';
+import KeyBoard from './KeyBoard';
 
 const Piano = () => {
   return (
     <div className="Piano-Wrapper">
-      It's working!
+      <PianoTop />
+      <KeyBoard />
     </div>
   )
 };

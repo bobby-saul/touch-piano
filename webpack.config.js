@@ -30,5 +30,8 @@ module.exports = {
   output: {
     path: __dirname + '/public',
     filename: 'app.js'
+  },
+  devServer: {
+    contentBase: __dirname + '/public'
   }
 };

@@ -1,19 +1,24 @@
 import React, {useState, useEffect} from "react";
 
-const Key = ({octave, octaveKey, index, mouseDown}) => {
+const Key = ({octave, octaveKey, index, mouseDown, playNote}) => {
   const [hovering, setHovering] = useState(false);
   const [pressed, setPressed] = useState(false);
 
+  function playKeyNote() {
+    playNote(octave + "-" + octaveKey);
+    setPressed(true);
+  }
+
   function mouseEnterHandler() {
     if (mouseDown) {
-      setPressed(true);
+      playKeyNote();
     }
   }
 
   function pressCheck() {
     setHovering(true);
     if (mouseDown) {
-      setPressed(true);
+      playKeyNote();
     }
   }
 
@@ -24,7 +29,7 @@ const Key = ({octave, octaveKey, index, mouseDown}) => {
 
   useEffect(() => {
     if (hovering && mouseDown) {
-      setPressed(true);
+      playKeyNote();
     }
     if (!mouseDown && pressed) {
       setPressed(false);

@@ -11,7 +11,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.(html)$/i,
+        test: /\.(html|mp3)$/i,
         loader: 'file-loader',
         options: {
           name: '[name].[ext]',

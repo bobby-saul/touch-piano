@@ -2,7 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Piano from './js/Piano';
 import './index.html';
-import './style.scss'
+import './style.scss';
+import './image/favicon.png';
 // Notes
 import './audio/piano-1-c.mp3';
 import './audio/piano-1-cd.mp3';
